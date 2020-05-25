@@ -61,6 +61,26 @@ class _HomePageState extends State<HomePage> {
               },
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: FlatButton(
+              color: Theme.of(context).accentColor,
+              child: Text(
+                "Limpar",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              onPressed: () {
+                setState(() {
+                  bloc.clean();
+                });
+              },
+            ),
+          ),
         ],
       ),
     );

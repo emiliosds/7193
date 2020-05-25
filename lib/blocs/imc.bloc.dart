@@ -24,4 +24,10 @@ class ImcBloc {
       result = "Obesidade Grau III (${imc.toStringAsPrecision(2)})";
     }
   }
+
+  clean() {
+    heightCtrl = new MaskedTextController(mask: '000');
+    weightCtrl = new MaskedTextController(mask: '000');
+    result = "Preencha os dados para calcular seu IMC";
+  }
 }

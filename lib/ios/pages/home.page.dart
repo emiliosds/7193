@@ -50,7 +50,21 @@ class _HomePageState extends State<HomePage> {
                 });
               },
             ),
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: CupertinoButton(
+              child: Text("Limpar"),
+              onPressed: () {
+                setState(() {
+                  bloc.clean();
+                });
+              },
+            ),
+          ),
         ],
       ),
     );
